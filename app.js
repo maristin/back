@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public'))); //path/public
 const users = require('./routes/userRoutes');
 app.use("/users", users);
 
-app.set('puerto', process.env.PORT || 5000);
-app.listen(app.get('puerto'), () => {
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
     console.log('Example app listening on port ' + app.get('puerto'));
 });
